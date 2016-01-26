@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+
+      {% include "home/includes/carousel.html" with carousel_items=self.carousel_items.all only %}
+
+      {% include "home/includes/streamfield.html" with content=self.body %}
+{% endblock %}

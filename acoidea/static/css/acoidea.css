@@ -1,0 +1,18 @@
+/* Custom css for acoidea */
+
+body {
+  padding-top: 50px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Brand and main menu */
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+/* Carousel */
