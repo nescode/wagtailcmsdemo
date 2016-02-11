@@ -1,11 +1,7 @@
 db.sqlite3
-bin/
-include/
-lib/
 .DS_STORE
 .Python
 *.pyc
 *.pyo
 /static
-/acoidea/settings/dev.py
 /media
