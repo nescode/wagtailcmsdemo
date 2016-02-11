@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # Custom apps
+    # Thirdparty APPS
+    'crispy_forms',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -138,3 +139,6 @@ MEDIA_URL = '/media/'
 # Wagtail settings
 
 WAGTAIL_SITE_NAME = "acoidea"
+
+# Crispy forms
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
