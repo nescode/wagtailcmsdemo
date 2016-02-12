@@ -7,11 +7,11 @@ of Wagtail CMS.
 ## For developers, From developers
 
 Demonstration of Wagtail features in this repositories is for developers only who know how to setup
-virtual environment and setup Django project.
+virtual environment and Django project.
 
 ## Dependencies
 
-There is not dependencies as such. You can setup using virtual environment or Vagrant. Choice is yours.
+There is no dependencies as such. You can setup Wagtail CMS using virtual environment or Vagrant. Choice is yours.
 
 ## Installation
 
