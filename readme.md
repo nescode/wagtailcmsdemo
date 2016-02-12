@@ -16,19 +16,19 @@ There is no dependencies as such. You can setup Wagtail CMS using virtual enviro
 ## Installation
 
 Run the following commands:
-'''
+```
 git clone https://github.com/nescode/wagtailcmsdemo.git
 cd wagtailcmsdemo
 pip install -r requirement.txt
 python manage.py migrate
 python manage.py runserver
-'''
+```
 The beautiful Wagtail CMS will be now accessible at http://127.0.0.1:8000/ and the Wagtail admin interface
 at http://127.0.0.1:8000/admin/ . To login into admin panel create a superuser:
 
-'''
+```
 python manage.py createsuperuser
-'''
+```
 Give your username, email id and password to complete the user creation process.
 
 ## This repositories as a starting point for your project
@@ -38,16 +38,15 @@ as a starting point. However, you can create your own secret key in case you wan
 repositories as a starting point for your next beautiful Wagtail project.
 Follow this steps to create a new secret key:
 
-'''
 Step 1: Login into python prompt
-'''
+```
 $ python
-'''
+```
 Step2: Import necessary package and generate secret key
-'''
+```
 import os
 os.urandom(24).encode('hex')
-'''
+```
 This will generate a secret key in hex code.
 Now you can replace with existing secret key in settings/dev.py
 
