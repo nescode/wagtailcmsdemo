@@ -31,6 +31,30 @@ python manage.py createsuperuser
 ```
 Give your username, email id and password to complete the user creation process.
 
+## features
+
+Available features details are as follow:
+* Dynamic homepage model to manage multiple block through admin
+* Carousel
+* Blog
+* Event management
+* Person/team page
+* Contact page
+* Dynamic form through admin
+* Standard page
+* Indexing
+* Search across site
+* Document management
+* Registration/SignIn
+* Multi-user
+* Group
+* Multi-site
+* Customized permission management for content management
+* Google SEO Optimization for - Page title, slug, page description
+* Schedule publishing of content Go live & Expiry
+
+We are adding generic usable features frequently. Keep watching this list for any update.
+
 ## This repositories as a starting point for your project
 
 Since, secret key is public in this repositories, we do not recommend using this repositories
