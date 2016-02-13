@@ -17,6 +17,9 @@ urlpatterns = [
 
     url(r'^search/$', search_views.search, name='search'),
 
+    # Registration redux url
+    url(r'^accounts/', include('registration.backends.default.urls')),
+
     url(r'', include(wagtail_urls)),
 ]
 
