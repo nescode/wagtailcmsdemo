@@ -52,6 +52,7 @@ INSTALLED_APPS = [
 
     # Thirdparty APPS
     'crispy_forms',
+    'registration',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -142,3 +143,11 @@ WAGTAIL_SITE_NAME = "acoidea"
 
 # Crispy forms
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+# Registration redux setiing
+
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_LOGIN = True
+REGISTRATION_EMAIL_HTML = True
+SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'
