@@ -1,8 +1,10 @@
-from __future__ import unicode_literals
 
+from __future__ import unicode_literals
+from datetime import date
 from django.db import models
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django import forms
+from django.http import HttpResponse
 
 from wagtail.wagtailcore.models import Page, Orderable
 from wagtail.wagtailcore.fields import RichTextField, StreamField
@@ -23,6 +25,7 @@ from wagtail.wagtaildocs.blocks import DocumentChooserBlock
 from modelcluster.fields import ParentalKey
 from modelcluster.tags import ClusterTaggableManager
 from taggit.models import TaggedItemBase
+
 
 # Event audience Choice
 
