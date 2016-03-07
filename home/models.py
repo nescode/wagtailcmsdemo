@@ -37,6 +37,35 @@ COLOUR_CHOICES = (
     ('white', "White"),
     ('black', "Black"),
 )
+
+# Text alignment choice
+ALIGN_CHOICES = (
+    ('left', "Left"),
+    ('right', "Right"),
+    ('center', "Centre"),
+)
+
+ # Image size choice
+SIZE_CHOICES = (
+    ('auto', "Auto"),
+    ('cover', "Cover"),
+    ('50%', "Small"),
+    ('200%', "Large"),
+)
+
+ # Image size choice in %
+PERCENT_CHOICES = (
+    ('10%', "10%"),
+    ('20%', "20%"),
+    ('30%', "30%"),
+    ('40%', "40%"),
+    ('50%', "50%"),
+    ('60%', "60%"),
+    ('70%', "70%"),
+    ('80%', "80%"),
+    ('90%', "90%"),
+    ('100%', "100%"),
+)
 # Event audience Choice
 
 EVENT_AUDIENCE_CHOICES = (
@@ -109,6 +138,8 @@ class LinkFields(models.Model):
 
     class Meta:
         abstract = True
+
+
 # Google map block
 
 class GoogleMapBlock(blocks.StructBlock):
@@ -121,6 +152,26 @@ class GoogleMapBlock(blocks.StructBlock):
         icon = 'cogs'
         label = 'Google Map'
 
+# One column block
+
+class OneColumnBlock(blocks.StructBlock):
+
+    back_image = ImageChooserBlock()
+    background_size = blocks.ChoiceBlock(choices=SIZE_CHOICES,default="auto")
+    background_x_position = blocks.ChoiceBlock(choices=PERCENT_CHOICES,default="50%")
+    background_y_position = blocks.ChoiceBlock(choices=PERCENT_CHOICES,default="50%")
+    text_align = blocks.ChoiceBlock(choices=ALIGN_CHOICES,default="center")
+    one_column = blocks.StreamBlock([
+           ('heading', blocks.CharBlock(classname="full title")),
+           ('paragraph', blocks.RichTextBlock()),
+        ], icon='arrow-left', label='Parallax content')
+
+    class Meta:
+        template = 'home/includes/one_column_block.html'
+        icon = 'placeholder'
+        label = 'Parallax Column'
+
+        
 # Two column block
 
 class TwoColumnBlock(blocks.StructBlock):
@@ -191,6 +242,7 @@ class HomeStreamBlock(StreamBlock):
     pullquote = PullQuoteBlock()
     aligned_html = AlignedHTMLBlock(icon="code", label='Raw HTML')
     document = DocumentChooserBlock(icon="doc-full-inverse")
+    one_column = OneColumnBlock()
     two_columns = TwoColumnBlock()
     three_columns = ThreeColumnBlock()
     embedded_video = EmbedBlock(icon="media")

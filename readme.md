@@ -35,6 +35,7 @@ Give your username, email id and password to complete the user creation process.
 
 Available features details are as follow:
 * Dynamic homepage model to manage multiple block through admin
+* Two and Three column content
 * Carousel
 * Blog
 * Event management
