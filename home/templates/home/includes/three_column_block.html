@@ -1,0 +1,13 @@
+<div class="row {{ self.background }}">
+
+      <div class="col-md-4">
+           {% include "home/includes/page_blocks.html" with blocks=self.left_column only %}
+      </div>
+      <div class="col-md-4">
+           {% include "home/includes/page_blocks.html" with blocks=self.right_column only %}
+     </div>
+     <div class="col-md-4">
+          {% include "home/includes/page_blocks.html" with blocks=self.right_column only %}
+    </div>
+
+</div>
