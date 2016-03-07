@@ -26,7 +26,17 @@ from modelcluster.fields import ParentalKey
 from modelcluster.tags import ClusterTaggableManager
 from taggit.models import TaggedItemBase
 
+from wagtail.wagtailcore import blocks
+from wagtail.wagtailembeds.blocks import EmbedBlock
+from wagtail.wagtailadmin.edit_handlers import FieldPanel, FieldRowPanel,MultiFieldPanel, \
+    InlinePanel, PageChooserPanel, StreamFieldPanel
 
+# Column background color Choice
+
+COLOUR_CHOICES = (
+    ('white', "White"),
+    ('black', "Black"),
+)
 # Event audience Choice
 
 EVENT_AUDIENCE_CHOICES = (
@@ -99,6 +109,75 @@ class LinkFields(models.Model):
 
     class Meta:
         abstract = True
+# Google map block
+
+class GoogleMapBlock(blocks.StructBlock):
+    map_long = blocks.CharBlock(required=True,max_length=255)
+    map_lat = blocks.CharBlock(required=True,max_length=255)
+    map_zoom_level = blocks.CharBlock(default=14,required=True,max_length=3)
+
+    class Meta:
+        template = 'home/includes/google_map.html'
+        icon = 'cogs'
+        label = 'Google Map'
+
+# Two column block
+
+class TwoColumnBlock(blocks.StructBlock):
+    background = blocks.ChoiceBlock(choices=COLOUR_CHOICES, default="white")
+    left_column = blocks.StreamBlock([
+            ('heading', blocks.CharBlock(classname="full title")),
+            ('paragraph', blocks.RichTextBlock()),
+            ('image', ImageChooserBlock()),
+            ('embedded_video', EmbedBlock()),
+            ('google_map', GoogleMapBlock()),
+        ], icon='arrow-left', label='Left column content')
+
+    right_column = blocks.StreamBlock([
+            ('heading', blocks.CharBlock(classname="full title")),
+            ('paragraph', blocks.RichTextBlock()),
+            ('image', ImageChooserBlock()),
+            ('embedded_video', EmbedBlock()),
+            ('google_map', GoogleMapBlock()),
+        ], icon='arrow-right', label='Right column content')
+
+    class Meta:
+        template = 'home/includes/two_column_block.html'
+        icon = 'placeholder'
+        label = 'Two Columns'
+
+# Three column block
+
+class ThreeColumnBlock(blocks.StructBlock):
+    background = blocks.ChoiceBlock(choices=COLOUR_CHOICES, default="white")
+    left_column = blocks.StreamBlock([
+            ('heading', blocks.CharBlock(classname="full title")),
+            ('paragraph', blocks.RichTextBlock()),
+            ('image', ImageChooserBlock()),
+            ('embedded_video', EmbedBlock()),
+            ('google_map', GoogleMapBlock()),
+        ], icon='arrow-left', label='Left column content')
+
+    center_column = blocks.StreamBlock([
+            ('heading', blocks.CharBlock(classname="full title")),
+            ('paragraph', blocks.RichTextBlock()),
+            ('image', ImageChooserBlock()),
+            ('embedded_video', EmbedBlock()),
+            ('google_map', GoogleMapBlock()),
+        ], icon='arrow-right', label='Center column content')
+
+    right_column = blocks.StreamBlock([
+            ('heading', blocks.CharBlock(classname="full title")),
+            ('paragraph', blocks.RichTextBlock()),
+            ('image', ImageChooserBlock()),
+            ('embedded_video', EmbedBlock()),
+            ('google_map', GoogleMapBlock()),
+        ], icon='arrow-right', label='Right column content')
+
+    class Meta:
+        template = 'home/includes/three_column_block.html'
+        icon = 'placeholder'
+        label = 'Three Columns'
 
 # Streamfileds
 
@@ -112,6 +191,11 @@ class HomeStreamBlock(StreamBlock):
     pullquote = PullQuoteBlock()
     aligned_html = AlignedHTMLBlock(icon="code", label='Raw HTML')
     document = DocumentChooserBlock(icon="doc-full-inverse")
+    two_columns = TwoColumnBlock()
+    three_columns = ThreeColumnBlock()
+    embedded_video = EmbedBlock(icon="media")
+    google_map = GoogleMapBlock()
+
 
 
 class RelatedLink(LinkFields):

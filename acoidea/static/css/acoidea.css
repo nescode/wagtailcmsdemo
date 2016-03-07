@@ -26,7 +26,6 @@ body {
     background-color: #FFFFFF;
 
 }
-/* Carousel */
 
 /* Carousel */
 
@@ -49,9 +48,13 @@ body {
 
 /* Font customizaton */
 
-h2, h3, h4{
+h1, h2, h3, h4{
   font-weight: 300;
   color: #333333;
+}
+
+h1{
+  font-size: 30px;
 }
 
 p{
@@ -60,11 +63,14 @@ p{
   color: #333333;
 }
 
+strong {
+    font-weight: 400;
+    font-size: 15px;
+}
+
 /* Page into */
 
 .pageintro{
   padding-top: 30px;
   font-weight: 500;
 }
-
-/* Body content */
