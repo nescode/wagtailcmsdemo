@@ -7,7 +7,6 @@
 
   .parallax{{ id_prefix }} {
    height: 50vh;
-   background-attachment: fixed;
    background-size:{{ self.background_size }};
    background-repeat:no-repeat;
    background-position: {{ self.background_x_position }} {{ self.background_y_position }};
@@ -16,7 +15,7 @@
 </style>
 <div class="parallax{{ id_prefix }}" style="background-image: url({{ back_photo.url }});">
 
- <div style="text-align:{{ self.text_align }};padding:15px;">
+ <div style="text-align:{{ self.text_align }};padding:50px;">
 
  {% include "home/includes/page_blocks.html" with blocks=self.one_column only %}
 
