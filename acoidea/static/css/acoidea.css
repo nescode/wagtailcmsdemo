@@ -58,7 +58,7 @@ h1{
 }
 
 p{
-  font-size: 18px;#3F3333
+  font-size: 17px;
   font-weight: 300;
   color: #333333;
 }
@@ -68,6 +68,9 @@ strong {
     font-size: 15px;
 }
 
+label {
+    font-weight: 300;
+}
 /* Page into */
 
 .pageintro{

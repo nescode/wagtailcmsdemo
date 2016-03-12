@@ -23,6 +23,8 @@
 {% endblock %}
 
 {% block content %}
+<div class="col-md-8 col-md-offset-2">
+
     {% include "home/includes/carousel.html" with carousel_items=self.carousel_items.all only %}
 
     {% if self.body %}
@@ -32,4 +34,5 @@
     {% endif %}
 
     {% include "home/includes/related_links.html" with related_links=self.related_links.all only %}
+</div>
 {% endblock %}
