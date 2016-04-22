@@ -156,7 +156,7 @@ class GoogleMapBlock(blocks.StructBlock):
 
 class OneColumnBlock(blocks.StructBlock):
 
-    back_image = ImageChooserBlock()
+    back_image = ImageChooserBlock(blank=True)
     background_size = blocks.ChoiceBlock(choices=SIZE_CHOICES,default="auto")
     background_x_position = blocks.ChoiceBlock(choices=PERCENT_CHOICES,default="50%")
     background_y_position = blocks.ChoiceBlock(choices=PERCENT_CHOICES,default="50%")
@@ -171,7 +171,7 @@ class OneColumnBlock(blocks.StructBlock):
         icon = 'placeholder'
         label = 'Parallax Column'
 
-        
+
 # Two column block
 
 class TwoColumnBlock(blocks.StructBlock):
