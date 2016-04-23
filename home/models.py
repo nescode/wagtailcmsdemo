@@ -156,7 +156,7 @@ class GoogleMapBlock(blocks.StructBlock):
 
 class OneColumnBlock(blocks.StructBlock):
 
-    back_image = ImageChooserBlock()
+    back_image = ImageChooserBlock(blank=True)
     background_size = blocks.ChoiceBlock(choices=SIZE_CHOICES,default="auto")
     background_x_position = blocks.ChoiceBlock(choices=PERCENT_CHOICES,default="50%")
     background_y_position = blocks.ChoiceBlock(choices=PERCENT_CHOICES,default="50%")
@@ -171,7 +171,7 @@ class OneColumnBlock(blocks.StructBlock):
         icon = 'placeholder'
         label = 'Parallax Column'
 
-        
+
 # Two column block
 
 class TwoColumnBlock(blocks.StructBlock):
@@ -499,6 +499,7 @@ PersonPage.promote_panels = Page.promote_panels + [
 # Contact page
 
 class ContactPage(Page, ContactFields):
+    intro = RichTextField(blank=True)
     body = RichTextField(blank=True)
     feed_image = models.ForeignKey(
         'wagtailimages.Image',
@@ -514,6 +515,7 @@ class ContactPage(Page, ContactFields):
 
 ContactPage.content_panels = [
     FieldPanel('title', classname="full title"),
+    FieldPanel('intro', classname="full"),
     FieldPanel('body', classname="full"),
     MultiFieldPanel(ContactFields.panels, "Contact"),
 ]
@@ -673,6 +675,7 @@ class FormPage(AbstractEmailForm):
     intro = RichTextField(blank=True)
     thank_you_text = RichTextField(blank=True)
 
+
 FormPage.content_panels = [
     FieldPanel('title', classname="full title"),
     FieldPanel('intro', classname="full"),
@@ -685,7 +688,6 @@ FormPage.content_panels = [
     ], "Email")
 ]
 
-# Blog
 # Blog page
 
 class BlogPageCarouselItem(Orderable, CarouselItem):
@@ -701,6 +703,7 @@ class BlogPageTag(TaggedItemBase):
 
 
 class BlogPage(Page):
+    intro = RichTextField(blank=True)
     body = StreamField(HomeStreamBlock())
     tags = ClusterTaggableManager(through=BlogPageTag, blank=True)
     date = models.DateField("Post date")
@@ -724,6 +727,7 @@ class BlogPage(Page):
 BlogPage.content_panels = [
     FieldPanel('title', classname="full title"),
     FieldPanel('date'),
+    FieldPanel('intro', classname="full"),
     StreamFieldPanel('body'),
     InlinePanel('carousel_items', label="Carousel items"),
     InlinePanel('related_links', label="Related links"),

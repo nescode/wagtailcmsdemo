@@ -1,19 +1,14 @@
 <div class="page-header"><h3>Contact</h3></div>
 <div class="row">
     <dl>
-        <div class="col-sm-4">
+        <div class="col-md-6">
             {% if contact.address_1 %}
-                <dt>Address 1</dt>
-                <dd>{{ contact.address_1 }}</dd>
-            {% endif %}
-
-            {% if contact.address_2 %}
-                <dt>Address 2</dt>
-                <dd>{{ contact.address_2 }}</dd>
+                <dt>Nescode Technologies Private Limited</dt>
+                <dd>{{ contact.address_1 }} {% if contact.address_2 %} {{ contact.address_2 }}{% endif %}</dd>
             {% endif %}
 
             {% if contact.city %}
-                <dt>City</dt>
+
                 <dd>{{ contact.city }}</dd>
             {% endif %}
 
@@ -23,7 +18,7 @@
             {% endif %}
 
             {% if contact.post_code %}
-                <dt>Post code</dt>
+            
                 <dd>{{ contact.post_code }}</dd>
             {% endif %}
         </div>
