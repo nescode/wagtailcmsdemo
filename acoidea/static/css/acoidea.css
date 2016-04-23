@@ -5,6 +5,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+
 /* Navbar, Brand and main menu */
 .navbar-brand {
     float: left;
@@ -46,6 +47,9 @@ body {
     background-repeat: no-repeat;
 }
 
+.carousel-caption {
+    padding-bottom: 80px;
+}
 /* Font customizaton */
 
 h1, h2, h3, h4{
@@ -61,6 +65,7 @@ p{
   font-size: 17px;
   font-weight: 300;
   color: #333333;
+  text-align: justify;
 }
 
 strong {
@@ -77,3 +82,13 @@ label {
   padding-top: 30px;
   font-weight: 500;
 }
+
+/* Listing */
+
+.list-inline{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+/* Sidebar */

@@ -1,22 +1,28 @@
 {% extends "base.html" %}
-
+{% load crispy_forms_tags %}
 {% load home_tags wagtailcore_tags %}
 
 {% block content %}
+<div class="row">
+  <div class="col-md-6">
+{% include "home/includes/intro.html" with intro=self.intro only %}
     {% if self.body %}
         <div class="body-content">
             {{ self.body|richtext }}
         </div>
     {% endif %}
-
+    
+</div>
+<div class="col-md-6">
     {% include "home/includes/contact.html" with contact=self only %}
-
-    {%  if self.post_code %}
+</div>
+</div>
+    {#{%  if self.post_code %}#}
 
         {# {% get_google_maps_key as google_maps_key %} #}
 
-        <div class="page-header"><h3>Map</h3></div>
+        <!-- <div class="page-header"><h3>Map</h3></div> -->
 
-        <img src="http://maps.googleapis.com/maps/api/staticmap?center={{ self.post_code }}&amp;zoom=13&amp;size=800x400&amp;maptype=roadmap&amp;sensor=false&amp;markers=color:green|{{ self.post_code }}{% if google_maps_key %}&amp;key={{ google_maps_key }}{% endif %}" />
-    {% endif %}
+        <!-- <img src="http://maps.googleapis.com/maps/api/staticmap?center={{ self.post_code }}&amp;zoom=13&amp;size=800x400&amp;maptype=roadmap&amp;sensor=false&amp;markers=color:green|{{ self.post_code }}{% if google_maps_key %}&amp;key={{ google_maps_key }}{% endif %}" /> -->
+    {#{% endif %}#}
 {% endblock %}

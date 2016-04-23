@@ -27,8 +27,9 @@
           {% if carousel_item.caption or carousel_item.link %}
             <div class="carousel-caption">
               <h3>{{ carousel_item.caption }}</h3>
+              <h6>{{ carousel_items.description }}</h6>
               {% if carousel_item.link %}
-                <a href="{{ carousel_item.link }}" class="btn btn-primary">Open</a>
+                <a href="{{ carousel_item.link }}" class="btn btn-default">READ MORE</a>
               {% endif %}
             </div>
           {% endif %}
