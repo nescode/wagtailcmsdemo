@@ -7,19 +7,12 @@
 
     {# {% include "home/includes/carousel.html" with carousel_items=self.carousel_items.all only %} #}
 
-<div class="row">
-<div class="col-md-8">
   {% if self.body %}
       <div class="body-content">
-          {{ self.body|richtext }}
+          {#{{ self.body|richtext }} #}
+          {% include "home/includes/streamfield.html" with content=self.body %}
       </div>
   {% endif %}
-</div>
-<div class="col-md-4">
-  {% include "home/includes/related_links.html" with related_links=self.related_links.all only %}
-
-</div>
-</div>
 
 
   {#{% include "home/includes/related_links.html" with related_links=self.related_links.all only %} #}
