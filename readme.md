@@ -1,13 +1,13 @@
 # Wagtail CMS Demo
 
-This is a demonstration project for Wagtail CMS features. We do not recommend using
-this project to start your own site. This project provide features demonstration
-of Wagtail CMS.
+This is a demonstration project for Wagtail CMS features. You can use this project as a starting point. This project provide features demonstration of Wagtail CMS ver 1.3.1.
+
+Note: Migrations to Wagtail ver 1.4.3 is in development. Will release shortly.
 
 ## For developers, From developers
 
 Demonstration of Wagtail features in this repositories is for developers only who know how to setup
-virtual environment and Django project.
+virtual environment and Django project. In case you would like know how to setup virtualenv, browse through [Configure virtualenv and virtualenvwrapper](http://www.sunilsrikumar.com/2016/03/django-multi-site-setup/)
 
 ## Dependencies
 
@@ -31,22 +31,22 @@ python manage.py createsuperuser
 ```
 Give your username, email id and password to complete the user creation process.
 
-## features
+## Features List
 
 Available features details are as follow:
-* Dynamic homepage model to manage multiple block through admin
-* Two and Three column content
+* Dynamic homepage and standard page model to manage multiple block through admin panel.
+* One, Two and Three column content
 * Carousel
 * Blog
 * Event management
 * Person/team page
 * Contact page
 * Dynamic form through admin
-* Standard page
+* Standard page with StreamFieldPanel for multiple content type.
 * Indexing
 * Search across site
 * Document management
-* Registration/SignIn
+* Registration/SignIn using registration redux module.
 * Multi-user
 * Group
 * Multi-site
@@ -58,9 +58,7 @@ We are adding generic usable features frequently. Keep watching this list for an
 
 ## This repositories as a starting point for your project
 
-Since, secret key is public in this repositories, we do not recommend using this repositories
-as a starting point. However, you can create your own secret key in case you want to use this
-repositories as a starting point for your next beautiful Wagtail project.
+Since, secret key is public in this repositories, we recommend developer to create your own secret key in case you want to use this repositories as a starting point for your next beautiful Wagtail project.
 Follow this steps to create a new secret key:
 
 Step 1: Login into python prompt
@@ -75,7 +73,11 @@ os.urandom(24).encode('hex')
 This will generate a secret key in hex code.
 Now you can replace with existing secret key in settings/dev.py
 
+## Paid development
+
+We love Wagtail because of its flexibility and clean code. We offer paid development of [Wagtail CMS](https://wagtail.io/). Just say hello at info@nescode.com.
+
 ## Django development company
 
 We are passionate technologists. We offer full stack development and consulting for organizations
-with Python, Django framework and PostgreSQL. Drop us a line at info@nescode.com to shape your idea.
+with Python, Django framework, Wagtail and PostgreSQL. Drop us a line at info@nescode.com to shape your idea.

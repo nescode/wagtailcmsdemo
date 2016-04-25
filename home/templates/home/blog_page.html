@@ -24,8 +24,6 @@
 
 {% block content %}
 {% include "home/includes/intro.html" with intro=self.intro only %}
-<div class="row">
-<div class="col-md-8">
 
     {% include "home/includes/carousel.html" with carousel_items=self.carousel_items.all only %}
 
@@ -35,9 +33,5 @@
         </div>
     {% endif %}
 
-</div>
-<div class="col-md-4 margin-top">
-  {% include "home/includes/related_links.html" with related_links=self.related_links.all only %}
-</div>
-</div>
+
 {% endblock %}

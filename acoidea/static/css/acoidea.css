@@ -5,7 +5,9 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-
+.container{
+  max-width: 1100px;
+}
 /* Navbar, Brand and main menu */
 .navbar-brand {
     float: left;
@@ -90,5 +92,3 @@ label {
   padding-bottom: 5px;
   text-transform: uppercase;
 }
-
-/* Sidebar */
