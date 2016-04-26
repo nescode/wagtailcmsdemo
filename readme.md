@@ -1,8 +1,13 @@
 # Wagtail CMS Demo
 
-This is a demonstration project for Wagtail CMS features. You can use this project as a starting point. This project provide features demonstration of Wagtail CMS ver 1.3.1.
+This is a demonstration project for Wagtail CMS features. You can use this project as a starting point. This project provide features demonstration of Wagtail CMS ver1.4.3
 
-Note: Migrations to Wagtail ver 1.4.3 is in development. Will release shortly.
+## Wagtail CMS & Django Framework Version
+
+```
+wagtail==1.4.3
+Django==1.9.5
+```
 
 ## For developers, From developers
 

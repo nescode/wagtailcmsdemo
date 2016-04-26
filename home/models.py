@@ -329,6 +329,7 @@ class HomePage(Page):
     body = StreamField(HomeStreamBlock())
     search_fields = Page.search_fields + (
         index.SearchField('body'),
+        index.SearchField('title'),
     )
 
     class Meta:
@@ -720,6 +721,7 @@ class BlogPage(Page):
 
     search_fields = Page.search_fields + (
         index.SearchField('body'),
+        index.SearchField('intro'),
     )
 
     @property
