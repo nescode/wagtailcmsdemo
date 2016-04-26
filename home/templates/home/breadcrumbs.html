@@ -1,3 +1,4 @@
+
 {% load wagtailcore_tags %}
 
 {% if ancestors %}
@@ -9,5 +10,6 @@
         <li><a href="{% pageurl ancestor %}">{{ ancestor }}</a></li>
       {% endif %}
     {% endfor %}
+
   </ol>
 {% endif %}
