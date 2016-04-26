@@ -23,6 +23,8 @@
 {% endblock %}
 
 {% block content %}
+
+<div class="col-md-10 col-md-offset-1">
 {% include "home/includes/intro.html" with intro=self.intro only %}
 
     {% include "home/includes/carousel.html" with carousel_items=self.carousel_items.all only %}
@@ -30,6 +32,7 @@
     {% if self.body %}
         <div class="body-content">
             {% include "home/includes/streamfield.html" with content=self.body %}
+        </div>
         </div>
     {% endif %}
 

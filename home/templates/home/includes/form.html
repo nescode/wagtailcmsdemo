@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="col-md-8 col-md-offset-2">
+
+    {% include "home/includes/intro.html" with intro=self.intro only %}
+
+    <form action="{% pageurl self %}" method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input class="btn btn-default" type="submit">
+    </form>
+</div>
+{% endblock %}
