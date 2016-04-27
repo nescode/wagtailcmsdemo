@@ -105,7 +105,12 @@ p{
 }
 
 a{
+  color: #939393;
+}
+
+a:hover{
   color: #FE6600;
+  text-decoration: none;
 }
 strong {
     font-weight: 400;
