@@ -4,7 +4,7 @@
 
     {% for block in blocks %}
         {% if block.block_type == 'heading' %}
-            <h1>{{ block.value }}</h1>
+            <h2>{{ block.value }}</h2>
         {% elif block.block_type == 'image' %}
             {% image block.value width-900 class="img-responsive" %}
         {% else %}

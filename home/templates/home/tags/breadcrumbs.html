@@ -3,19 +3,18 @@
 {% if ancestors %}
 <div class="well">
 <div class="container">
-  <ol class="breadcrumb">
+    <ol class="breadcrumb">
 
-    {% for ancestor in ancestors %}
-      {% if forloop.last %}
+      {% for ancestor in ancestors %}
+        {% if forloop.last %}
 
-        <li class="active">{{ ancestor }}</li>
-      {% else %}
-        <li><a href="{% pageurl ancestor %}">{{ ancestor }}</a></li>
+          <li class="active">{{ ancestor }}</li>
+        {% else %}
+          <li><a href="{% pageurl ancestor %}">{{ ancestor }}</a></li>
 
-      {% endif %}
-
-    {% endfor %}
+        {% endif %}
+      {% endfor %}
+          </ol>
     </div>
-  </ol>
 </div>
 {% endif %}
