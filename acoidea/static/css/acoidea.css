@@ -85,16 +85,19 @@ body {
 
 .carousel-caption {
     padding-bottom: 80px;
+    color: #FFF;
 }
 /* Font customizaton */
 
-h1, h2, h3, h4{
+h2, h3, h4{
   font-weight: 300;
   color: #333333;
 }
 
 h1{
-  font-size: 30px;
+  font-size: 40px;
+  color: #FFF;
+  font-weight: 300;
 }
 
 p{
@@ -118,6 +121,31 @@ strong {
 }
 
 label {
+    font-weight: 300;
+}
+
+
+.carousel-intro {
+  color: #FFF;
+}
+
+/* Buttons */
+
+.btn-danger {
+    color: #FFF;
+    background-color: transparent;
+    border-color: #FFF;
+    border-width: 2px;
+    border-radius: 0px;
+    font-weight: 300;
+}
+
+.btn-danger:hover {
+    color: #FFF;
+    background-color: #0A1E53;
+    border-color: #FFF;
+    border-width: 2px;
+    border-radius: 0px;
     font-weight: 300;
 }
 /* Page into */
