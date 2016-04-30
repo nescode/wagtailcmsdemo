@@ -34,7 +34,7 @@
                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
               })();
         </script>
-
+        
     </head>
 
     <body class="{% block body_class %}{% endblock %}">
@@ -50,7 +50,6 @@
 
         {# Body content #}
         {% breadcrumbs %}
-        <div class="wrapper">
         <div class="container">
 
             {% block content %}{% endblock %}
@@ -68,6 +67,6 @@
         {% block extra_js %}
             {# Override this in templates to add extra javascript #}
         {% endblock %}
-   </div>
+
     </body>
 </html>

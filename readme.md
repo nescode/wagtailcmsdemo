@@ -1,6 +1,6 @@
 # Wagtail CMS Demo
 
-This is a demonstration project for Wagtail CMS features. You can use this project as a starting point. This project provide features demonstration of Wagtail CMS ver1.4.3
+This is a demonstration project for Wagtail CMS features. You can use this project as a starting point. This project provide features demonstration of Wagtail CMS.
 
 ## Wagtail CMS & Django Framework Version
 
@@ -58,6 +58,8 @@ Available features details are as follow:
 * Customized permission management for content management
 * Google SEO Optimization for - Page title, slug, page description
 * Schedule publishing of content Go live & Expiry
+* Bootstrap front end framework
+* Crispy form
 
 We are adding generic usable features frequently. Keep watching this list for any update.
 
