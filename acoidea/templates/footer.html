@@ -1,3 +1,7 @@
+{% load home_tags cache compress static wagtailuserbar %}
+{% load wagtailcore_tags %}
+{% load crispy_forms_tags %}
+
 <div class="footercustom">
 <div class="footer">
   <div class="container">
@@ -16,17 +20,7 @@
         </div>
         <div class="col-md-4">
           <h5>Products and Services</h5>
-          <ul class="list-unstyled copyright">
-            <a href="/services"><li>Application development</li></a>
-            <li>Ecommerce solution</li>
-            <li>Mobile apps development</li>
-            <li>Consulting services</li>
-            <li>Portal development</li>
-            <li>ERPNext Implementation</li>
-            <li>Odoo Implementation</li>
-            <li>Google Apps for Business</li>
-            <li>SSL Certificates</li>
-          </ul>
+          {% adverts %}
         </div>
         <div class="col-md-4">
           <h5>We are Social</h5>

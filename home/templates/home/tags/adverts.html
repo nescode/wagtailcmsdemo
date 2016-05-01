@@ -1,7 +1,7 @@
 {% load wagtailcore_tags %}
 
 {% if adverts %}
-  <ul class="advert-list list-inline text-center">
+  <ul class="list-unstyled">
     {% for advert in adverts %}
       <li>
         {% if advert.url %}
@@ -12,7 +12,7 @@
           {{ advert.text }}
         {% if advert.url or advert.page %}</a>{% endif %}
       </li>
-      {% if not forloop.last %}<li><strong>·</strong></li>{% endif %}
+      <!-- {% if not forloop.last %}<li><strong>·</strong></li>{% endif %} -->
     {% endfor %}
   </ul>
 {% endif %}
