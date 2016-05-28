@@ -41,7 +41,7 @@ Give your username, email id and password to complete the user creation process.
 Available features details are as follow:
 * Dynamic homepage and standard page model to manage multiple block through admin panel.
 * One, Two and Three column content
-* Carousel
+* Carousel image slider
 * Blog
 * Event management
 * Person/team page
@@ -82,7 +82,7 @@ Now you can replace with existing secret key in settings/dev.py
 
 ## Paid development
 
-We love Wagtail because of its flexibility and clean code. We offer paid development of [Wagtail CMS](https://wagtail.io/). Just say hello at info@nescode.com.
+We love Wagtail because of its flexibility and clean code. We offer paid development of [Wagtail CMS](https://wagtail.io/). Just say hello at info@nescode.com to start a discussion.
 
 ## Django development company
 
