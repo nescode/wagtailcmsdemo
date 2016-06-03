@@ -17,10 +17,11 @@ body {
   max-width: 1100px;
 }
 /* Navbar, Brand and main menu */
+
 .navbar-brand {
     float: left;
     height: 50px;
-    padding: 15px 15px;
+    padding: 11px 15px;
     font-size: 20px;
     line-height: 20px;
     font-weight: 700;
@@ -44,6 +45,7 @@ body {
 .navbar-default .navbar-nav>li>a {
     color: #000;
 }
+
 
 /* Breadcrumb */
 
@@ -134,12 +136,17 @@ label {
     font-weight: 300;
 }
 
-
+blockquote {
+  color: #FF4422;
+  border-left: 5px solid #FF4422;
+}
 .carousel-intro {
   color: #FFF;
 }
 
-
+.textjustify{
+  text-align: justify;
+}
 /* Buttons */
 
 .btn-danger {

@@ -1,6 +1,6 @@
 {% load wagtailimages_tags wagtailcore_tags %}
 
-{% image self.back_image width-2000 as back_photo %}
+{# {% image self.back_image width-2000 as back_photo %} #}
 
 
 <style>
@@ -16,7 +16,7 @@
 <div class="parallax{{ id_prefix }}" style="background-image: url({{ back_photo.url }});">
 
  <div style="text-align:{{ self.text_align }};padding:50px;">
-<div class="col-md-8 col-md-offset-2">
+<div class="col-md-8 col-md-offset-2 col-xs-12">
  {% include "home/includes/page_blocks.html" with blocks=self.one_column only %}
 </div>
  </div>
