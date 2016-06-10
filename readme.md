@@ -2,11 +2,15 @@
 
 This is a demonstration project for Wagtail CMS features. You can use this project as a starting point. This project provide features demonstration of Wagtail CMS.
 
+## Who using it?
+
+[Nescode](https://nescode.com/)
+
 ## Wagtail CMS & Django Framework Version
 
 ```
-wagtail==1.4.3
-Django==1.9.5
+wagtail==1.5.2
+Django==1.9.7
 ```
 
 ## For developers, From developers
