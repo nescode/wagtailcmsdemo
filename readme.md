@@ -5,7 +5,7 @@ This is a demonstration project for Wagtail CMS features. You can use this proje
 ## Wagtail CMS & Django Framework Version
 
 ```
-wagtail==1.4.3
+wagtail==1.5.2
 Django==1.9.5
 ```
 
